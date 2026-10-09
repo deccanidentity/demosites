@@ -1,0 +1,126 @@
+/* ── FlatMark Styles ────────────────────────────────────────────────────────── */
+.fm-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #00051a 0%, #001040 50%, #00051a 100%);
+  overflow: hidden;
+}
+
+.fm-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 40% 50%, rgba(37,99,235,0.15), transparent 60%);
+}
+
+.fm-hero__content {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-20) var(--space-6);
+}
+
+.fm-badge {
+  background: rgba(37, 99, 235, 0.15);
+  color: #60A5FA;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  display: inline-flex;
+  gap: 6px;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-5);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.fm-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: var(--space-5);
+  color: var(--text-primary);
+}
+
+.fm-hero__sub {
+  font-size: 1.0625rem;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin-bottom: var(--space-8);
+  line-height: 1.7;
+}
+
+/* ── Light Mode Overrides for FlatMark ────────────────────────────────────── */
+[data-theme="light"] .fm-hero {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #f8fafc 100%);
+}
+
+[data-theme="light"] .fm-hero::before {
+  background: radial-gradient(ellipse at 40% 50%, rgba(37,99,235,0.08), transparent 60%);
+}
+
+[data-theme="light"] .fm-badge {
+  background: rgba(37, 99, 235, 0.1);
+  color: #1d4ed8;
+  border-color: rgba(37, 99, 235, 0.25);
+}
+
+[data-theme="light"] .fm-hero__title {
+  color: #0f172a;
+}
+
+[data-theme="light"] .fm-hero__sub {
+  color: #475569;
+}
+
+[data-theme="light"] .chip {
+  background: #ffffff;
+  color: #475569;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+[data-theme="light"] .chip:hover {
+  color: #0f172a;
+  border-color: rgba(37, 99, 235, 0.4);
+}
+[data-theme="light"] .chip.active {
+  background: #2563EB !important;
+  color: #ffffff !important;
+  border-color: #2563EB !important;
+}
+
+[data-theme="light"] .chip-sm {
+  background: #ffffff;
+  color: #475569;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+[data-theme="light"] .chip-sm:hover {
+  color: #0f172a;
+  border-color: rgba(37, 99, 235, 0.4);
+}
+[data-theme="light"] .chip-sm.active {
+  background: #2563EB !important;
+  color: #ffffff !important;
+  border-color: #2563EB !important;
+}
+
+[data-theme="light"] .pm-gallery__item {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 60%, #e0f2fe 100%) !important;
+  border-color: rgba(37, 99, 235, 0.2) !important;
+  color: #1d4ed8 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .plot-modal {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: rgba(37, 99, 235, 0.3);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .plot-modal h3 {
+  color: #0f172a;
+}
+

@@ -1,0 +1,240 @@
+/* ── VillaMark Styles ──────────────────────────────────────────────────────── */
+.vm-hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #0d0a05 0%, #1a1408 50%, #0d0a05 100%);
+  overflow: hidden;
+}
+.vm-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 50%, rgba(167,138,90,0.12), transparent 60%);
+}
+.vm-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.4), transparent);
+}
+.vm-hero__content {
+  position: relative; z-index: 1;
+  padding: var(--space-20) 0;
+}
+.vm-hero__title {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: var(--space-4) 0;
+}
+.vm-hero__sub { font-size: 1.0625rem; color: var(--text-secondary); max-width: 480px; margin-bottom: var(--space-8); line-height: 1.7; }
+.vm-logo { color: #a78a5a !important; }
+
+.vm-type-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); margin-top: var(--space-6); }
+@media (max-width: 600px) { .vm-type-grid { grid-template-columns: 1fr; } }
+
+.vm-type-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--duration) var(--ease);
+}
+.vm-type-card:hover, .vm-type-card--active {
+  border-color: #a78a5a;
+  background: rgba(167,138,90,0.08);
+}
+.vm-type-card__icon { font-size: 2rem; margin-bottom: var(--space-3); }
+.vm-type-card__label { font-weight: 700; margin-bottom: var(--space-1); }
+.vm-type-card__area { font-size: 0.875rem; color: var(--text-muted); margin-bottom: var(--space-1); }
+.vm-type-card__price { font-size: 1.0625rem; font-weight: 700; color: #a78a5a; margin-bottom: var(--space-1); }
+.vm-type-card__avail { font-size: 0.75rem; color: #34D399; }
+
+.vm-tab-bar { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-6); }
+.vm-plan-tabs { display: flex; gap: var(--space-2); margin-bottom: var(--space-5); }
+
+.vm-detail { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); }
+@media (max-width: 700px) { .vm-detail { grid-template-columns: 1fr; } }
+
+.vm-detail__visual {
+  background: linear-gradient(135deg, #1a1408, #0d0a05);
+  border: 1px solid rgba(167,138,90,0.2);
+  border-radius: var(--radius-lg);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  min-height: 260px;
+  gap: var(--space-3);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.vm-detail__house { font-size: 4rem; }
+.vm-detail__info { display: flex; flex-direction: column; gap: var(--space-5); }
+.vm-detail__info h3 { font-size: 1.5rem; font-weight: 800; }
+.vm-detail__specs { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+.vm-detail__actions { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+
+/* Villa Specs Box */
+.td-spec {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.td-spec span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.td-spec strong {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.vm-plan-visual {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  min-height: 280px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: var(--space-5);
+}
+.vm-plan-label { font-size: 0.875rem; color: var(--text-muted); font-weight: 600; }
+.vm-plan-rooms {
+  display: flex; gap: var(--space-3); flex-wrap: wrap; justify-content: center;
+}
+.vm-plan-rooms span {
+  padding: var(--space-3) var(--space-5);
+  background: rgba(167,138,90,0.08);
+  border: 1px solid rgba(167,138,90,0.2);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* ── Light Mode Overrides for VillaMark ───────────────────────────────────── */
+[data-theme="light"] .vm-hero {
+  background: linear-gradient(135deg, #fdfbf7 0%, #fef3c7 45%, #fdfbf7 100%);
+}
+[data-theme="light"] .vm-hero::before {
+  background-image: radial-gradient(circle at 20% 50%, rgba(180, 117, 6, 0.1), transparent 60%);
+}
+[data-theme="light"] .vm-hero__overlay {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.2), transparent);
+}
+[data-theme="light"] .vm-hero__title {
+  color: #0f172a;
+}
+[data-theme="light"] .vm-hero__sub {
+  color: #475569;
+}
+[data-theme="light"] .vm-type-card {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+[data-theme="light"] .vm-type-card:hover,
+[data-theme="light"] .vm-type-card--active {
+  border-color: #b47506;
+  background: #fffbeb;
+  box-shadow: 0 8px 24px rgba(180, 117, 6, 0.12);
+}
+[data-theme="light"] .vm-type-card__label {
+  color: #0f172a;
+}
+[data-theme="light"] .vm-type-card__area {
+  color: #64748b;
+}
+[data-theme="light"] .vm-type-card__price {
+  color: #b47506;
+}
+
+[data-theme="light"] .vm-detail__visual {
+  background: linear-gradient(135deg, #fefce8, #fef3c7);
+  border-color: rgba(180, 117, 6, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  color: #78350f;
+}
+[data-theme="light"] .vm-detail__info h3 {
+  color: #0f172a;
+}
+
+[data-theme="light"] .td-spec {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+[data-theme="light"] .td-spec span {
+  color: #64748b;
+}
+[data-theme="light"] .td-spec strong {
+  color: #0f172a;
+}
+
+[data-theme="light"] .vm-plan-visual {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+[data-theme="light"] .vm-plan-label {
+  color: #475569;
+}
+[data-theme="light"] .vm-plan-rooms span {
+  background: #f8fafc;
+  border-color: rgba(0, 0, 0, 0.08);
+  color: #334155;
+}
+
+[data-theme="light"] .chip {
+  background: #ffffff;
+  color: #475569;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+[data-theme="light"] .chip:hover {
+  color: #0f172a;
+  border-color: rgba(180, 117, 6, 0.4);
+}
+[data-theme="light"] .chip.active {
+  background: #b47506 !important;
+  color: #ffffff !important;
+  border-color: #b47506 !important;
+}
+
+[data-theme="light"] .pm-section__title {
+  color: #0f172a;
+}
+
+[data-theme="light"] .pm-gallery__item {
+  background: linear-gradient(135deg, #fef9c3 0%, #fef3c7 60%, #fffbeb 100%) !important;
+  border-color: rgba(180, 117, 6, 0.25) !important;
+  color: #854d0e !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .plot-modal {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: rgba(180, 117, 6, 0.3);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .plot-modal h3 {
+  color: #0f172a;
+}
+
+[data-theme="light"] .plot-modal input,
+[data-theme="light"] .plot-modal select {
+  background: #f8fafc;
+  color: #0f172a;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+

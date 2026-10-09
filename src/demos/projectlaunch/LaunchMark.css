@@ -1,0 +1,389 @@
+/* ── LaunchMark Styles ──────────────────────────────────────────────────────── */
+.lm-demo {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #fafafa;
+  font-family: var(--font-body);
+  transition: background var(--duration) var(--ease), color var(--duration) var(--ease);
+}
+
+.lm-header {
+  padding: 14px var(--space-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0a0a0a;
+  position: relative;
+  z-index: 100;
+  transition: background var(--duration) var(--ease), border-color var(--duration) var(--ease);
+}
+
+.lm-brand-title {
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+.lm-brand-sub {
+  font-size: 0.65rem;
+  color: #a1a1aa;
+  letter-spacing: 0.15em;
+}
+
+.lm-hero {
+  min-height: 85vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(ellipse at 80% 20%, rgba(220, 38, 38, 0.2), transparent 70%), linear-gradient(180deg, #0a0a0a 0%, #171717 100%);
+  padding: var(--space-12) 0;
+  transition: background var(--duration) var(--ease);
+}
+
+.lm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(220, 38, 38, 0.15);
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  color: #f87171;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-6);
+}
+
+.lm-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: var(--space-5);
+  color: #ffffff;
+}
+
+.lm-hero-sub {
+  font-size: 1.125rem;
+  color: #d4d4d8;
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+  max-width: 520px;
+}
+
+/* Countdown */
+.lm-countdown {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin-bottom: var(--space-6);
+  max-width: 440px;
+  transition: all var(--duration) var(--ease);
+}
+.lm-countdown-label {
+  font-size: 0.8rem;
+  color: #a1a1aa;
+  margin-bottom: var(--space-3);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.lm-countdown-box {
+  flex: 1;
+  text-align: center;
+  background: #262626;
+  padding: 10px 4px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all var(--duration-fast) var(--ease);
+}
+.lm-countdown-val {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #f87171;
+  font-variant-numeric: tabular-nums;
+}
+.lm-countdown-unit {
+  font-size: 0.65rem;
+  color: #a1a1aa;
+  font-weight: 600;
+}
+
+/* Meta specs */
+.lm-meta-row {
+  display: flex;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  color: #a1a1aa;
+  font-size: 0.875rem;
+}
+.lm-meta-row strong {
+  color: #ffffff;
+}
+
+/* Lead Capture Form Card */
+.lm-form-card {
+  background: #171717;
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  position: relative;
+  transition: all var(--duration) var(--ease);
+  color: #fafafa;
+}
+.lm-form-card h2,
+.lm-form-card h3 {
+  color: #ffffff;
+}
+.lm-form-card p {
+  color: #a1a1aa;
+}
+.lm-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #a1a1aa;
+  margin-bottom: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.lm-input {
+  width: 100%;
+  padding: 12px 14px;
+  background: #0a0a0a;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.9375rem;
+  transition: border-color var(--duration-fast) var(--ease);
+}
+.lm-input:focus {
+  outline: none;
+  border-color: #dc2626;
+}
+
+/* Highlights */
+.lm-section-darker {
+  padding: var(--space-16) var(--space-6);
+  background: #121212;
+  transition: background var(--duration) var(--ease);
+}
+.lm-section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: 4px;
+}
+.lm-highlight-card {
+  background: #1a1a1a;
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all var(--duration) var(--ease);
+}
+.lm-highlight-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+.lm-highlight-card p {
+  font-size: 0.875rem;
+  color: #a1a1aa;
+  line-height: 1.6;
+}
+
+/* Price Sheet */
+.lm-pricesheet-section {
+  padding: var(--space-16) var(--space-6);
+  background: #0a0a0a;
+  transition: background var(--duration) var(--ease);
+}
+.lm-price-table {
+  background: #171717;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all var(--duration) var(--ease);
+}
+.lm-price-thead {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+  padding: 16px 24px;
+  background: #262626;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #a1a1aa;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.lm-price-row {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1.5fr 1fr;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  align-items: center;
+  color: #f4f4f5;
+}
+.lm-price-row:last-child {
+  border-bottom: none;
+}
+.lm-price-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+.lm-price-area {
+  color: #a1a1aa;
+}
+
+/* Footer */
+.lm-footer {
+  padding: var(--space-10) var(--space-6);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0a0a0a;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: #71717a;
+  transition: background var(--duration) var(--ease);
+}
+
+/* ── Light Mode Overrides for LaunchMark ──────────────────────────────────── */
+[data-theme="light"] .lm-demo {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+[data-theme="light"] .lm-header {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .lm-brand-title {
+  color: #0f172a;
+}
+[data-theme="light"] .lm-brand-sub {
+  color: #64748b;
+}
+
+[data-theme="light"] .lm-hero {
+  background: radial-gradient(ellipse at 80% 20%, rgba(220, 38, 38, 0.08), transparent 70%), linear-gradient(180deg, #fff5f5 0%, #ffffff 100%);
+}
+
+[data-theme="light"] .lm-badge {
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
+  color: #dc2626;
+}
+
+[data-theme="light"] .lm-hero-title {
+  color: #0f172a;
+}
+
+[data-theme="light"] .lm-hero-sub {
+  color: #475569;
+}
+
+[data-theme="light"] .lm-countdown {
+  background: #ffffff;
+  border-color: rgba(220, 38, 38, 0.15);
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.06);
+}
+[data-theme="light"] .lm-countdown-label {
+  color: #64748b;
+}
+[data-theme="light"] .lm-countdown-box {
+  background: #fef2f2;
+  border-color: rgba(220, 38, 38, 0.2);
+}
+[data-theme="light"] .lm-countdown-val {
+  color: #b91c1c;
+}
+[data-theme="light"] .lm-countdown-unit {
+  color: #7f1d1d;
+}
+
+[data-theme="light"] .lm-meta-row {
+  color: #64748b;
+}
+[data-theme="light"] .lm-meta-row strong {
+  color: #0f172a;
+}
+
+[data-theme="light"] .lm-form-card {
+  background: #ffffff;
+  border-color: rgba(220, 38, 38, 0.25);
+  box-shadow: 0 20px 40px rgba(220, 38, 38, 0.08);
+  color: #0f172a;
+}
+[data-theme="light"] .lm-form-card h2,
+[data-theme="light"] .lm-form-card h3 {
+  color: #0f172a;
+}
+[data-theme="light"] .lm-form-card p {
+  color: #475569;
+}
+[data-theme="light"] .lm-label {
+  color: #475569;
+}
+[data-theme="light"] .lm-input {
+  background: #f8fafc;
+  border-color: rgba(0, 0, 0, 0.12);
+  color: #0f172a;
+}
+[data-theme="light"] .lm-input:focus {
+  border-color: #dc2626;
+  background: #ffffff;
+}
+
+[data-theme="light"] .lm-section-darker {
+  background: #fafafa;
+}
+[data-theme="light"] .lm-section-title {
+  color: #0f172a;
+}
+[data-theme="light"] .lm-highlight-card {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+[data-theme="light"] .lm-highlight-card h3 {
+  color: #0f172a;
+}
+[data-theme="light"] .lm-highlight-card p {
+  color: #475569;
+}
+
+[data-theme="light"] .lm-pricesheet-section {
+  background: #ffffff;
+}
+[data-theme="light"] .lm-price-table {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+[data-theme="light"] .lm-price-thead {
+  background: #f8fafc;
+  color: #475569;
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+[data-theme="light"] .lm-price-row {
+  border-bottom-color: rgba(0, 0, 0, 0.06);
+  color: #0f172a;
+}
+[data-theme="light"] .lm-price-title {
+  color: #0f172a;
+}
+[data-theme="light"] .lm-price-area {
+  color: #64748b;
+}
+
+[data-theme="light"] .lm-footer {
+  background: #f8fafc;
+  border-top-color: rgba(0, 0, 0, 0.08);
+  color: #64748b;
+}

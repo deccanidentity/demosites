@@ -1,0 +1,214 @@
+.footer {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+  padding: var(--space-16) 0 var(--space-8);
+  margin-top: var(--space-20);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.1fr 1.4fr;
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+
+.footer__brand-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: var(--space-3);
+}
+
+.footer__logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.footer__logo-name-img {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.footer__logo {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.footer__logo span { color: var(--brand-gold); }
+
+.footer__legal-name {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.footer__tagline {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--space-3);
+}
+
+.footer__quote {
+  font-size: 0.8125rem;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: var(--space-5);
+  border-left: 2px solid var(--brand-gold);
+  padding-left: 10px;
+}
+
+.footer__socials {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.footer__socials a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all var(--duration-fast) var(--ease);
+}
+
+.footer__socials a:hover {
+  border-color: var(--brand-gold);
+  color: var(--brand-gold);
+  background: var(--brand-gold-dim);
+  transform: translateY(-2px);
+}
+
+.footer__socials a[aria-label="WhatsApp"]:hover {
+  border-color: #25D366;
+  color: #25D366;
+  background: rgba(37, 211, 102, 0.15);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+}
+
+.footer__heading {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.footer__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer__list a {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  transition: color var(--duration-fast) var(--ease);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.footer__list a:hover { color: var(--text-primary); }
+
+.footer__soon {
+  font-size: 0.625rem;
+  padding: 1px 6px;
+  background: rgba(100,116,139,0.15);
+  border-radius: var(--radius-pill);
+  color: var(--text-muted);
+  border: 1px solid rgba(100,116,139,0.2);
+  margin-left: 4px;
+}
+
+.footer__office-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  background: var(--glass-bg);
+  padding: 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.footer__addr-line {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+.footer__addr-icon {
+  flex-shrink: 0;
+}
+
+.footer__branches {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.footer__branches li {
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.footer__bottom {
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer__bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__bottom-links a:hover {
+  color: var(--brand-gold);
+}
+
+.footer__author-link {
+  color: var(--brand-gold);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease);
+}
+
+.footer__author-link:hover {
+  text-decoration: underline;
+  color: var(--brand-gold-light);
+}
+
+@media (max-width: 1024px) {
+  .footer__grid { grid-template-columns: 1fr 1fr; gap: var(--space-8); }
+  .footer__brand { grid-column: 1/-1; }
+}
+
+@media (max-width: 600px) {
+  .footer__grid { grid-template-columns: 1fr; }
+  .footer__bottom { flex-direction: column; text-align: center; }
+}
