@@ -7,14 +7,33 @@ export default function PricingPage() {
   const navigate = useNavigate();
 
   return (
-    <main className="page-content">
+    <main className="page-content pricing-page">
       <section className="pricing-header section" aria-labelledby="pricing-title">
         <div className="container" style={{ textAlign: 'center' }}>
           <div className="section-label">Transparent Pricing</div>
           <h1 id="pricing-title" className="section-title">Website Packages</h1>
-          <p className="section-sub" style={{ margin: '0 auto' }}>
+          <p className="section-sub" style={{ margin: '0 auto 24px auto' }}>
             One pricing system, every industry. Real Estate, Healthcare, Education — same tiers, purpose-built features.
           </p>
+
+          {/* Flat 30% Offer Tag Banner */}
+          <div className="pricing-offer-tag-bar">
+            <div className="pricing-offer-tag-bar__left">
+              <div className="pricing-offer-tag-bar__pill">
+                <span className="pricing-offer-tag-bar__dot" aria-hidden="true" />
+                FLAT 30% OFFER
+              </div>
+              <div className="pricing-offer-tag-bar__text">
+                <strong>Flat 30% Off</strong> on all website development packages!
+              </div>
+            </div>
+            <button
+              className="btn btn-primary pricing-offer-tag-bar__btn"
+              onClick={() => navigate('/contact')}
+            >
+              Contact Us for More Information →
+            </button>
+          </div>
         </div>
       </section>
 
@@ -44,7 +63,7 @@ export default function PricingPage() {
                   ))}
                 </ul>
                 <a
-                  href={`https://wa.me/${siteConfig.whatsapp.replace(/\D/g,'')}?text=${encodeURIComponent(`Hi! I'm interested in the ${pkg.name} package (${pkg.priceLabel}). Please share more details.`)}`}
+                  href={`https://wa.me/${siteConfig.whatsapp.replace(/\D/g,'')}?text=${encodeURIComponent(`Hi! I'm interested in the ${pkg.name} package (${pkg.priceLabel}) with the Flat 30% offer. Please share more details.`)}`}
                   className={`btn ${pkg.highlight ? 'btn-primary' : 'btn-outline'}`}
                   style={{ width: '100%', justifyContent: 'center', marginTop: 'auto' }}
                   target="_blank"
@@ -59,7 +78,7 @@ export default function PricingPage() {
           {/* Note */}
           <div className="pricing-note">
             <span>💡</span>
-            <span>All prices are one-time development costs. Hosting is separate and typically ₹1,500–₹5,000/year. GST as applicable. Need a custom quote? <button className="ind-coming-soon__link" onClick={() => navigate('/contact')}>Contact us</button>.</span>
+            <span>All prices are one-time development costs. Flat 30% offer applicable on all packages — <button className="ind-coming-soon__link" onClick={() => navigate('/contact')}>contact us for more information</button>.</span>
           </div>
         </div>
       </section>

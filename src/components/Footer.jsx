@@ -28,7 +28,7 @@ export default function Footer() {
                 height="28"
               />
             </div>
-            <div className="footer__legal-name">{siteConfig.companyLegalName}</div>
+            <div className="footer__legal-name">Your Business. Your Website. Your Way.</div>
 
             <p className="footer__tagline">{siteConfig.tagline}</p>
             <p className="footer__quote">"{siteConfig.corporateQuote}"</p>
@@ -93,6 +93,7 @@ export default function Footer() {
             <h4 className="footer__heading">Quick Links</h4>
             <ul className="footer__list">
               <li><Link to="/templates">All Templates Catalogue</Link></li>
+              <li><Link to="/#clients">Client Stories & Reviews</Link></li>
               <li><Link to="/pricing">Pricing & Custom Packages</Link></li>
               <li><Link to="/industries/real-estate">Real Estate Showcase (6 Live)</Link></li>
               <li><Link to="/contact">Get This Template</Link></li>

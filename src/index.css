@@ -183,7 +183,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section {
-  padding: var(--space-20) 0;
+  padding: 56px 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 0;
+  }
 }
 
 /* ── Navigation ──────────────────────────────────────────────────────────── */

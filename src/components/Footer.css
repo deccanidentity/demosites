@@ -1,8 +1,8 @@
 .footer {
   background: var(--bg-surface);
   border-top: 1px solid var(--border);
-  padding: var(--space-16) 0 var(--space-8);
-  margin-top: var(--space-20);
+  padding: var(--space-12) 0 var(--space-8);
+  margin-top: 0;
 }
 
 .footer__grid {
@@ -42,10 +42,11 @@
 .footer__logo span { color: var(--brand-gold); }
 
 .footer__legal-name {
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--brand-gold);
+  font-weight: 700;
   letter-spacing: 0.02em;
+  margin-top: 4px;
 }
 
 .footer__tagline {

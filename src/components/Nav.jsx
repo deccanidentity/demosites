@@ -33,6 +33,7 @@ export default function Nav() {
           <li><NavLink to="/" end>Home</NavLink></li>
           <li><NavLink to="/templates">Templates</NavLink></li>
           <li><NavLink to="/pricing">Pricing</NavLink></li>
+          <li><NavLink to="/clients">Clients</NavLink></li>
           <li><NavLink to="/contact">Contact</NavLink></li>
         </ul>
 
