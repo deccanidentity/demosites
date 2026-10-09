@@ -76,7 +76,7 @@ export default function Home() {
                   FIND YOUR INDUSTRY
                 </span>
                 <h2 id="industry-deck-title" className="hero__deck-title">
-                  Bring your vision to life — select your industry
+                  What kind of website do you need?
                 </h2>
               </div>
               <span className="hero__deck-hint">
